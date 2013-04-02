@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="double-tap anywhere to start/stop" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Pad-yw-s2g">
+                                <rect key="frame" x="30" y="337" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="triple-tap for shuffle mode On/Off" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="gfj-5J-zYM">
+                                <rect key="frame" x="-5" y="395" width="332" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="swipe up/down for volume" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="gDv-2q-2Vg">
+                                <rect key="frame" x="30" y="308" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="swipe left for previous, right for next song" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="wop-U4-msv">
+                                <rect key="frame" x="2" y="366" width="316" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="tmB-MC-ttR">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Get Songs" id="te8-Bk-mhD">
+                                        <connections>
+                                            <action selector="clickGetSongs:" destination="2" id="x5O-Af-pWA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Zv6-xr-2SJ"/>
+                                    <barButtonItem title="View Playlist" id="cs0-Ua-LI1">
+                                        <connections>
+                                            <segue destination="Ncn-Db-KBR" kind="modal" identifier="ViewControllerToTableViewControllerSegue" id="6Lx-xO-1Zd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Now Playing Song" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="UcU-E2-udG">
+                                <rect key="frame" x="78" y="14" width="164" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Album - Artist" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="0Ve-Ww-UM4">
+                                <rect key="frame" x="13" y="34" width="294" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="jql-Pi-Wqc">
+                                <rect key="frame" x="36" y="63" width="248" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="easyMusic" lineBreakMode="tailTruncation" minimumFontSize="10" id="nMN-L3-K22">
+                                <rect key="frame" x="8" y="0.0" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="2c8-Ot-VXP">
+                                <rect key="frame" x="89" y="423" width="131" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZrU-d8-cRz" appends="YES" id="pAi-34-TNJ"/>
+                            <outletCollection property="gestureRecognizers" destination="0X6-aj-S3l" appends="YES" id="av3-lb-z0i"/>
+                            <outletCollection property="gestureRecognizers" destination="bdo-XZ-OOS" appends="YES" id="czo-vC-c0z"/>
+                            <outletCollection property="gestureRecognizers" destination="VIG-TK-k2v" appends="YES" id="d6J-cq-NCg"/>
+                            <outletCollection property="gestureRecognizers" destination="wIl-aG-4tC" appends="YES" id="oOs-tr-lnH"/>
+                            <outletCollection property="gestureRecognizers" destination="vrf-7j-CyF" appends="YES" id="jPU-2v-4Od"/>
+                            <outletCollection property="gestureRecognizers" destination="FEb-H4-k1e" appends="YES" id="fub-td-BeI"/>
+                            <outletCollection property="gestureRecognizers" destination="jWy-xy-HUX" appends="YES" id="JdT-kz-yYs"/>
+                            <outletCollection property="gestureRecognizers" destination="Ttw-nA-Nwx" appends="YES" id="ERr-Yw-wWf"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="actionUpdateDisplay" destination="2c8-Ot-VXP" id="eCE-Gm-pMQ"/>
+                        <outlet property="doubleTapGestureRecognizer" destination="ZrU-d8-cRz" id="Vgd-V3-UAR"/>
+                        <outlet property="nowPlayingArtwork" destination="jql-Pi-Wqc" id="HDr-HV-2cQ"/>
+                        <outlet property="nowPlayingLabel" destination="UcU-E2-udG" id="9Kg-De-8hK"/>
+                        <outlet property="nowPlayingSublabel" destination="0Ve-Ww-UM4" id="x5I-Hj-6Z3"/>
+                        <outlet property="tripleTapGestureRecognizer" destination="0X6-aj-S3l" id="d20-cD-Vqp"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="ZrU-d8-cRz">
+                    <connections>
+                        <action selector="doubleTapGesture:" destination="2" id="eUP-eR-VYN"/>
+                        <outlet property="delegate" destination="2" id="Oa0-wg-cu5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="0X6-aj-S3l">
+                    <connections>
+                        <action selector="tripleTapGesture:" destination="2" id="oI1-Ju-xYe"/>
+                        <outlet property="delegate" destination="2" id="XPf-6M-gyP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="bdo-XZ-OOS">
+                    <connections>
+                        <action selector="swipeLeftGesture:" destination="2" id="n7m-0H-6Fp"/>
+                        <outlet property="delegate" destination="2" id="yZH-8q-Zii"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="VIG-TK-k2v">
+                    <connections>
+                        <action selector="swipeRightGesture:" destination="2" id="Ndc-ST-VV4"/>
+                        <outlet property="delegate" destination="2" id="Zy9-Bf-SYe"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="wIl-aG-4tC">
+                    <connections>
+                        <action selector="swipeUpGesture:" destination="2" id="2Z9-wn-hyi"/>
+                        <outlet property="delegate" destination="2" id="16N-8z-5XT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="vrf-7j-CyF">
+                    <connections>
+                        <action selector="swipeDownGesture:" destination="2" id="sQr-pj-JOj"/>
+                        <outlet property="delegate" destination="2" id="ldS-nx-apg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="FEb-H4-k1e">
+                    <connections>
+                        <action selector="twoFingerSwipeRightGesture:" destination="2" id="qUw-qi-4b9"/>
+                        <outlet property="delegate" destination="2" id="9cl-g4-0Xl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="jWy-xy-HUX">
+                    <connections>
+                        <action selector="twoFingerSwipeLeftGesture:" destination="2" id="uzV-5z-fXn"/>
+                        <outlet property="delegate" destination="2" id="auh-ly-jpR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="Ttw-nA-Nwx">
+                    <connections>
+                        <action selector="singleTapGesture:" destination="2" id="z2L-fG-SvU"/>
+                        <outlet property="delegate" destination="2" id="2I6-we-Sid"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+        <scene sceneID="175-54-azA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4f1-lw-8uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ncn-Db-KBR" customClass="TableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gyI-BI-C15">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ad5-a6-OSX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="wed-fe-uou" detailTextLabel="65i-JU-BLb" style="IBUITableViewCellStyleSubtitle" id="7dR-i4-xdM">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wed-fe-uou">
+                                                    <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="65i-JU-BLb">
+                                                    <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ncn-Db-KBR" id="xfB-bx-Rqq"/>
+                                    <outlet property="delegate" destination="Ncn-Db-KBR" id="OWF-WA-J8d"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Jzo-Qx-N3X">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Save" id="RiU-T0-770">
+                                        <connections>
+                                            <action selector="clickSave:" destination="Ncn-Db-KBR" id="wyx-ot-Y8o"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KYk-8a-FjM"/>
+                                    <barButtonItem title="Cancel" id="gO0-3x-Czc">
+                                        <connections>
+                                            <action selector="clickCancel:" destination="Ncn-Db-KBR" id="PsB-3p-I6t"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="theTableView" destination="ad5-a6-OSX" id="n1g-Yg-Ypi"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="576" y="-15"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="TableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clickCancel:"/>
+                <relationship kind="action" name="clickSave:"/>
+                <relationship kind="outlet" name="theTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clickGetSongs:"/>
+                <relationship kind="action" name="doubleTapGesture:"/>
+                <relationship kind="action" name="singleTapGesture:"/>
+                <relationship kind="action" name="swipeDownGesture:"/>
+                <relationship kind="action" name="swipeLeftGesture:"/>
+                <relationship kind="action" name="swipeRightGesture:"/>
+                <relationship kind="action" name="swipeUpGesture:"/>
+                <relationship kind="action" name="tripleTapGesture:"/>
+                <relationship kind="action" name="twoFingerSwipeLeftGesture:"/>
+                <relationship kind="action" name="twoFingerSwipeRightGesture:"/>
+                <relationship kind="outlet" name="actionUpdateDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="doubleTapGestureRecognizer" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="outlet" name="getSongsButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="nowPlayingArtwork" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nowPlayingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nowPlayingSublabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shakeSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="singleTapGestureRecognizer" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="tripleTapGestureRecognizer" candidateClass="UIGestureRecognizer"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
